@@ -7,10 +7,18 @@
     text-decoration: none;
 }
 
+.funcionalidades {
+    z-index: 0;
+}
+
 :root {
     --font-primary: "Baloo Da 2", serif;
     --font-secundary: "Josefin Slab", serif;
     --font-action: "Mulish", serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .hamburguer {
@@ -25,10 +33,12 @@
     justify-content: space-evenly;
     cursor: pointer;
     transition: all 0.9s;
+    z-index: 160;
 }
 
 .show-menu .hamburguer {
     right: 15.5rem;
+    z-index: 160;
 }
 
 .line {
@@ -37,10 +47,12 @@
     background-color: #ffffff;
     box-shadow: 0.1rem 0.1rem 1px #000;
     transition: transform 1s;
+    z-index: 160;
 }
 
 .show-menu #line1 {
     transform: rotate(45deg) translate(.6rem, .48rem);
+    z-index: 160;
 }
 
 .show-menu #line2 {
@@ -50,6 +62,11 @@
 
 .show-menu #line3 {
     transform: rotate(-45deg) translate(.4rem, -.50rem);
+    z-index: 160;
+}
+
+.container {
+    z-index: 160;
 }
 
 .hamburguer span {
@@ -64,6 +81,7 @@
     color: #ffffff;
     font-family: var(--font-action);
     opacity: 0;
+    z-index: 160;
 }
 
 .hamburguer span::before {
@@ -74,6 +92,7 @@
     border-left: .5rem solid transparent;
     border-bottom: .5rem solid transparent;
     left: -1rem;
+    z-index: 160;
 }
 
 .show-menu .hamburguer:hover span {
@@ -173,6 +192,7 @@ header {
     top: 0;
     right: -20rem;
     transition: all 0.9s;
+    z-index: 150;
 }
 
 .show-menu .sidebar {
@@ -547,4 +567,61 @@ header {
     font-size: 2rem;
     outline: none;
     border-radius: 10px;
+    border: none;
+    padding: 0.3rem;
+}
+
+.btn-orcamento {
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    grid-column: 2;
+}
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p {
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a {
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul {
+    display: flex;
+}
+
+#link-topo {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);
+    background: linear-gradient(to right, #3c1053, #ad5389);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.6rem #00000009;
 }
